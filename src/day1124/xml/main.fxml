@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.Button?>
+<?import javafx.scene.control.Button?>
 
 <VBox xmlns:fx="http://javafx.com/fxml/1">
 	<children>
-		<Button text = "나 버튼"></Button>
+		<Button text="나 버튼"></Button>
 	</children>
 </VBox>
