@@ -67,7 +67,15 @@ public class CalendarApp extends Application{
 		//모든 박스를 다시 초기화!!
 		for (int i = 0; i < box.length; i++) {
 			box[i].erase();
+			
 		}
+		int n = 1;
+		for (int i = startDayOfWeek-1; i < ((startDayOfWeek-1)+lastDate); i++) {
+			box[i].renderText(Integer.toString(n));
+			n++;
+		}
+		
+		//각 월에 알맞는 데이터 출력!!
 	}
 	
 	
@@ -83,7 +91,7 @@ public class CalendarApp extends Application{
 		int mm= (Integer)ch_mm.getValue();
 		cal.set(yy, mm-1, 1);//조작을 가함
 		startDayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
-		System.out.println("조작된 월의 현재요일: "+startDayOfWeek);//조작된 상태의 날짜 객체에서 현재 요일을 물어보자
+		System.out.println("조작된 월의 시작요일: "+startDayOfWeek);//조작된 상태의 날짜 객체에서 현재 요일을 물어보자
 	}
 	
 	//행: 6, 열: 7

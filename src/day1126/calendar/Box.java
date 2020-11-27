@@ -24,12 +24,9 @@ public class Box extends Canvas{
 		//모든 컴포넌트는 그래픽 처리에 사용되는 객체를 가지고 있다..
 		context= this.getGraphicsContext2D();
 
-		erase();
+		erase();//글씨 지우기
 
-		//글씨 그리기
-		context.setFill(Color.BLACK);//페인트통 교체
-		context.setFont(new Font(17));//포트 크기 설정
-		context.fillText(title, 2, 20);
+		renderText(title);//글씨 그리기
 	
 	}
 	
@@ -40,6 +37,14 @@ public class Box extends Canvas{
 		//구분라인
 		context.setStroke(Color.ORANGE);//선의 색상
 		context.strokeRect(0, 0, width, height);
+	}
+	
+	//현재 박스에 글씨 그리기!!
+	public void renderText(String title) {
+		//글씨 그리기
+		context.setFill(Color.BLACK);//페인트통 교체
+		context.setFont(new Font(17));//포트 크기 설정
+		context.fillText(title, 2, 20);
 	}
 	
 }
